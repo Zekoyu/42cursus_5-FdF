@@ -34,7 +34,7 @@ NAME = fdf
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -Imlx
+CFLAGS = -Wall -Wextra -Werror 
 
 # $< = first prerequisite (= xxxx.c = c files)
 # $(<:.c=.o) = xxxx.c to xxxx.o (simply changes .c to .o on file name)

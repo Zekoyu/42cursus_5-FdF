@@ -6,7 +6,7 @@
 /*   By: mframbou <mframbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 10:27:15 by mframbou          #+#    #+#             */
-/*   Updated: 2021/11/02 18:29:45 by mframbou         ###   ########.fr       */
+/*   Updated: 2021/11/02 18:57:52 by mframbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(int argc, char *argv[])
 {
 	t_render		render;
 
-	if (argc < 2 || parse_map(&render.map, argv[1]) == -1)
+	if (argc < 2 || argc > 3 || parse_map(&render.map, argv[1]) == -1)
 		return (print_error());
 	render.viewtype = VIEW_ISO;
 	render.color = 0x00FF0000;
