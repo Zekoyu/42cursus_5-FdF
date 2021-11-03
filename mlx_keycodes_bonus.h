@@ -6,7 +6,7 @@
 /*   By: mframbou <mframbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:13:52 by mframbou          #+#    #+#             */
-/*   Updated: 2021/11/02 18:31:21 by mframbou         ###   ########.fr       */
+/*   Updated: 2021/11/03 10:55:10 by mframbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@
 #  define KEY_PLUS 69
 #  define KEY_MINUS 78
 #  define KEY_ESC 53
+#  define KEY_F12 111
 
 # endif
 

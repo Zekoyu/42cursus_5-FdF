@@ -6,7 +6,7 @@
 /*   By: mframbou <mframbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:34:00 by mframbou          #+#    #+#             */
-/*   Updated: 2021/11/02 17:09:10 by mframbou         ###   ########.fr       */
+/*   Updated: 2021/11/03 10:48:38 by mframbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,8 @@ int	do_render(t_render *render)
 			&render->img.bits_per_pixel,
 			&render->img.line_length, &render->img.endian);
 	translate_img_bbox(render, -render->bbox.left, -render->bbox.top);
-	render->color = get_next_hsl_color(render->color, 20);
+	if (render->rgb_enabled)
+		render->color = get_next_hsl_color(render->color, 20);
 	draw_map_to_img(&render->img, &render->map, render->color);
 	mlx_put_image_to_window(render->main_win.mlx, render->main_win.window,
 		render->img.img, render->center_offset.x_2d,

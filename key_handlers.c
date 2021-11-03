@@ -6,7 +6,7 @@
 /*   By: mframbou <mframbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:14:42 by mframbou          #+#    #+#             */
-/*   Updated: 2021/11/02 18:16:00 by mframbou         ###   ########.fr       */
+/*   Updated: 2021/11/03 10:56:33 by mframbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ static void	if_forest_keycode(int keycode, t_render *render)
 		render->center_offset.y_2d += 50;
 	else if (keycode == KEY_S)
 		render->center_offset.y_2d -= 50;
+	else if (keycode == KEY_F12)
+		render->rgb_enabled = !render->rgb_enabled;
 	if_forest_view_keycode(keycode, render);
 }
 

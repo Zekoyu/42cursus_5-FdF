@@ -6,7 +6,7 @@
 /*   By: mframbou <mframbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 14:24:17 by mframbou          #+#    #+#             */
-/*   Updated: 2021/11/02 18:22:34 by mframbou         ###   ########.fr       */
+/*   Updated: 2021/11/03 10:47:55 by mframbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ typedef struct s_render
 	float			scale;
 	int				viewtype;
 	int				color;
+	char			rgb_enabled;
 }	t_render;
 
 // Rendering

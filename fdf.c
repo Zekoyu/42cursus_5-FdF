@@ -6,7 +6,7 @@
 /*   By: mframbou <mframbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 10:27:15 by mframbou          #+#    #+#             */
-/*   Updated: 2021/11/02 18:57:52 by mframbou         ###   ########.fr       */
+/*   Updated: 2021/11/03 10:49:42 by mframbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void	init_main_win(t_window *main_win, int width, int height, char *name)
 static float	get_fullscreen_scale(t_bounding_box *bbox,
 		int width, int height)
 {
-	return ((float) fabs(fmin((double) fabs((double) width - 100.0)
+	return ((float) fabs(fmin((double) fabs((double) width - width / 10)
 				/ (bbox->right - bbox->left),
-				(double) fabs((double) height - 100.0)
+				(double) fabs((double) height - height / 10)
 				/ (bbox->bottom - bbox->top))));
 }
 
@@ -49,8 +49,10 @@ int	main(int argc, char *argv[])
 		return (print_error());
 	render.viewtype = VIEW_ISO;
 	render.color = 0x00FF0000;
+	render.rgb_enabled = 0;
 	render.scale = 1.0;
-	init_main_win(&render.main_win, 1920, 1080, "Orondarnaque");
+	init_main_win(&render.main_win, 1280, 720, "Orondarnaque");
+	rotate_cart_left(&render.map);
 	init_iso_and_bounding_box(&render);
 	render.img.img = mlx_new_image(render.main_win.mlx,
 			(render.bbox.right - render.bbox.left) + 1,
